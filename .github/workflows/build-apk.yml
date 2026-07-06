@@ -21,7 +21,6 @@ jobs:
         node-version: 22
 
     - name: Install dependencies
-      working-directory: test
       run: npm install
 
     - name: Set up JDK 17
@@ -32,19 +31,18 @@ jobs:
         cache: 'gradle'
 
     - name: Sync Capacitor
-      working-directory: test
       run: npx cap sync android
 
     - name: Grant execute permission for gradlew
-      working-directory: test/android
+      working-directory: android
       run: chmod +x gradlew
 
     - name: Build with Gradle
-      working-directory: test/android
+      working-directory: android
       run: ./gradlew assembleDebug --no-daemon
 
     - name: Upload Debug APK
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
-        path: test/android/app/build/outputs/apk/debug/app-debug.apk
+        path: android/app/build/outputs/apk/debug/app-debug.apk
