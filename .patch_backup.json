@@ -1,0 +1,14 @@
+{
+    "files": {
+        "package.json": {
+            "action": "modify",
+            "original_content": "{\n  \"name\": \"test\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"license\": \"ISC\",\n  \"author\": \"\",\n  \"type\": \"commonjs\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"cap:sync\": \"npx cap sync android\",\n    \"cap:open\": \"npx cap open android\"\n  }\n}\n",
+            "destination_path": null
+        },
+        ".github/workflows/build-apk.yml": {
+            "action": "create",
+            "original_content": null,
+            "destination_path": null
+        }
+    }
+}

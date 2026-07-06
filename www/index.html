@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Capacitor App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="hero">
+      <div class="logo-container">
+        <div class="logo-glow"></div>
+        <div class="logo">⚡</div>
+      </div>
+      <h1 id="greeting">Welcome, Explorer!</h1>
+      <p class="subtitle">Your Capacitor Android App</p>
+    </header>
+
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+      <span class="icon">🌙</span>
+    </button>
+
+    <main class="card">
+      <div class="input-group">
+        <label for="name-input">What's your name?</label>
+        <input type="text" id="name-input" placeholder="Enter your name..." autocomplete="off">
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="features">Explore</button>
+        <button class="tab-btn" data-tab="diagnostics">Device Info</button>
+      </div>
+
+      <div id="features" class="tab-content active">
+        <div class="interactive-section">
+          <h3>Inspiration Generator</h3>
+          <p id="quote-text" class="quote">"The best way to predict the future is to create it."</p>
+          <button id="quote-btn" class="primary-btn">Get New Quote</button>
+        </div>
+
+        <div class="interactive-section spacer">
+          <h3>Interactive Counter</h3>
+          <p class="counter-desc">Test UI responsiveness in WebView</p>
+          <div class="counter-container">
+            <button id="decrement-btn" class="circle-btn">-</button>
+            <span id="counter-value" class="counter">0</span>
+            <button id="increment-btn" class="circle-btn">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="diagnostics" class="tab-content">
+        <div class="diagnostics-grid">
+          <div class="diag-item">
+            <span class="diag-label">Status</span>
+            <span id="diag-status" class="diag-value">Checking...</span>
+          </div>
+          <div class="diag-item">
+            <span class="diag-label">Platform</span>
+            <span id="diag-platform" class="diag-value">Checking...</span>
+          </div>
+          <div class="diag-item">
+            <span class="diag-label">Screen</span>
+            <span id="diag-screen" class="diag-value">Checking...</span>
+          </div>
+          <div class="diag-item">
+            <span class="diag-label">Battery</span>
+            <span id="diag-battery" class="diag-value">Checking...</span>
+          </div>
+        </div>
+        <button id="refresh-diag-btn" class="secondary-btn">Refresh Stats</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Built with ❤️ & Capacitor</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
